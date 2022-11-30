@@ -36,7 +36,7 @@ pip install ipython
 pip install -U scikit-learn
 ```
 
-- Graphviv
+- Graphviz
 ```bash
 pip install graphviz
 ```
