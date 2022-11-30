@@ -8,7 +8,7 @@ System requirements:
 - Pydotplus
 - IPython
 - Sckit-learn
-- Graphviv
+- Graphviz
 """
 import pandas as pd
 import pydotplus as pdp
