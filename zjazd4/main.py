@@ -8,7 +8,7 @@ System requirements:
 - Pydotplus
 - IPython
 - Sckit-learn
-- Graphviv
+- Graphviz
 """
 import pandas as pd
 import pydotplus as pdp
@@ -18,7 +18,6 @@ from six import StringIO
 from sklearn import svm
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 
@@ -43,19 +42,17 @@ X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size=0.33, random
 """
 Crating classifier for decision tree
 """
-def tree(X_train, Y_train, X_test, Y_test):
+def tree(X_train, Y_train):
     classifier = DecisionTreeClassifier()
     classifier = classifier.fit(X_train, Y_train)
-    y_pred = classifier.predict(X_test)
 
-    cm = confusion_matrix(Y_test.to_frame('Outcome'), y_pred, )
     return classifier
 
 #pima indians
 """
 Creating and making image of decision tree for Pima Indians Diabetes data
 """
-classifier = tree(X_train, Y_train, X_test, Y_test)
+classifier = tree(X_train, Y_train)
 
 dot_data = StringIO()
 export_graphviz(classifier, out_file=dot_data,
@@ -97,7 +94,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size=0.33, random
 """
 Creating and making image of decision tree for Card transaction data
 """
-classifier = tree(X_train, Y_train, X_test, Y_test)
+classifier = tree(X_train, Y_train)
 
 dot_data = StringIO()
 export_graphviz(classifier, out_file=dot_data,
