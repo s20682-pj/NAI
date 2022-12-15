@@ -13,7 +13,7 @@ This repository contain 4 different python project:
 
 Dataset for CREDIT_CARD_FRAUD.py can be found in repository
 
-To run the reccomender please install:
+To run the programs please install:
 
 - [Python 3.10](https://www.python.org/downloads/)
 
