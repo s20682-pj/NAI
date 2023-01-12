@@ -1,6 +1,7 @@
-# Classification
+# Computer Vision
 
 Authors: Zuzanna Ciborowska s20682 & Joanna Walkiewicz s20161
+
 Python to detect faces, when finds red color it will put scope in the middle of the face
 
 
